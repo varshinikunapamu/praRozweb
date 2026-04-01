@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PraRoz Website</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    font-family:Arial;
+}
+
+body{
+    background: linear-gradient(to top, rgba(0,0,0,0.7)50%, rgba(0,0,0,0.7)50%),
+    url('https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    background-size:cover;
+    background-position:center;
+    height:100vh;
+}
+
+/* Navbar */
+.navbar{
+    width:1200px;
+    margin:auto;
+    height:75px;
+}
+
+.logo{
+    color:orange;
+    font-size:35px;
+    float:left;
+    padding-top:10px;
+}
+
+.menu ul{
+    float:left;
+    display:flex;
+}
+
+.menu ul li{
+    list-style:none;
+    margin-left:40px;
+    margin-top:27px;
+}
+
+.menu ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+}
+
+.search{
+    float:right;
+    margin-top:20px;
+}
+
+.srch{
+    padding:8px;
+    border:1px solid orange;
+    background:transparent;
+    color:white;
+}
+
+.btn{
+    padding:8px;
+    background:orange;
+    border:none;
+    cursor:pointer;
+}
+
+/* Content */
+.content{
+    width:1200px;
+    margin:auto;
+    color:white;
+    padding-top:100px;
+}
+
+.content h1{
+    font-size:50px;
+}
+
+.content span{
+    color:orange;
+}
+
+.par{
+    margin-top:20px;
+}
+
+.cn{
+    margin-top:20px;
+    padding:10px 20px;
+    background:orange;
+    border:none;
+}
+
+.cn a{
+    text-decoration:none;
+    color:black;
+}
+
+/* Login form */
+.form{
+    width:250px;
+    height:380px;
+    background:rgba(0,0,0,0.8);
+    position:absolute;
+    top:150px;
+    right:100px;
+    border-radius:10px;
+    padding:20px;
+}
+
+.form h2{
+    text-align:center;
+    background:white;
+    color:orange;
+    padding:8px;
+    border-radius:10px;
+}
+
+.form input{
+    width:100%;
+    margin-top:20px;
+    padding:10px;
+    background:transparent;
+    border-bottom:1px solid orange;
+    color:white;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+}
+
+.btnn{
+    width:100%;
+    margin-top:20px;
+    padding:10px;
+    background:orange;
+    border:none;
+    cursor:pointer;
+}
+
+.link{
+    margin-top:15px;
+    text-align:center;
+}
+
+.link a{
+    color:orange;
+}
+
+.liw{
+    text-align:center;
+    margin-top:10px;
+}
+
+.icons{
+    text-align:center;
+    margin-top:10px;
+}
+
+.icons i{
+    margin:5px;
+    cursor:pointer;
+    color:white;
+    font-style:normal;
+    font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<div class="navbar">
+    <h2 class="logo">PraRoz</h2>
+
+    <div class="menu">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">SERVICE</a></li>
+            <li><a href="#">DESIGN</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <div class="search">
+        <input class="srch" type="search" placeholder="Type to Search">
+        <button class="btn">Search</button>
+    </div>
+</div>
+
+<div class="content">
+    <h1>Web Design & <br><span>Development</span> <br>Course</h1>
+    <p class="par">
+        Web Design is a specialisation of the design stream.<br>
+        They also use HTML, CSS, WYSIWYG editing software,
+        mark up validators etc..
+    </p>
+
+    <button class="cn"><a href="#">JOIN US</a></button>
+</div>
+
+<div class="form">
+    <h2>Login Here</h2>
+    <input type="email" placeholder="Enter Email Here" id="email">
+    <input type="password" placeholder="Enter Password Here" id="password">
+
+    <button class="btnn" onclick="login()">Login</button>
+
+    <p class="link">Don't have an account?<br>
+    <a href="#">Sign up here</a></p>
+
+    <p class="liw">Log in with</p>
+
+
+</div>
+
+<script>
+function login(){
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if(email === "" || password === ""){
+        alert("Please enter email and password");
+    } else {
+        alert("Login Successful (Demo)");
+    }
+}
+</script>
+
+</body>
+</html>
